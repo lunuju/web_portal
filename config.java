@@ -63,6 +63,7 @@ public class sample {
 			}
 		}
 		
+		//return the database type so the system can be adjusted
 		return prop.getProperty("dbtype");
 	} //loadConfig() ends
 } //class sample ends
