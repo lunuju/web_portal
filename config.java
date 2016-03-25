@@ -1,5 +1,12 @@
 //whichever package you want
 
+/*
+it has been decided by mutual consensus that
+a flag will be used in order to indicate which
+configuration profile should be used at a given
+time
+*/
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -34,8 +41,9 @@ public class sample {
 		}
 	} //saveConfig() ends
 	
-	//functions that load configuration from a file
-	public static void loadConfig() {
+	//functions that load configuration from a file using a flag as return
+	public static String loadConfig() {
+		String dbtype = new String();
 		Properties prop = new Properties();
 		InputStream input = null;
 		
@@ -59,5 +67,7 @@ public class sample {
 				}
 			}
 		}
+		
+		return dbtype;
 	} //loadConfig() ends
 } //class sample ends
