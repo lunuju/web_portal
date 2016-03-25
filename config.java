@@ -21,16 +21,13 @@ public class sample {
 
 			//save properties to project root folder
 			prop.store(output, null);
-		}
-		catch(IOException io) {
+		} catch(IOException io) {
 			io.printStackTrace();
-		}
-		finally {
+		} finally {
 			if(output != null) {
 				try {
 					output.close();
-				}
-				catch(IOException e) {
+				} catch(IOException e) {
 					e.printStackTrace();
 				}
 			}
@@ -51,16 +48,13 @@ public class sample {
 			//get the property value and print it out
 			System.out.println(prop.getProperty("dbtype"));
 
-		}
-		catch(IOException ex) {
+		} catch(IOException ex) {
 			ex.printStackTrace();
-		}
-		finally {
+		} finally {
 			if(input != null) {
 				try {
 					input.close();
-				}
-				catch(IOException e) {
+				} catch(IOException e) {
 					e.printStackTrace();
 				}
 			}
