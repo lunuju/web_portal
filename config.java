@@ -43,7 +43,6 @@ public class sample {
 	
 	//functions that load configuration from a file using a flag as return
 	public static String loadConfig() {
-		String dbtype = new String();
 		Properties prop = new Properties();
 		InputStream input = null;
 		
@@ -52,10 +51,6 @@ public class sample {
 
 			//load a properties file
 			prop.load(input);
-
-			//get the property value and print it out
-			System.out.println(prop.getProperty("dbtype"));
-
 		} catch(IOException ex) {
 			ex.printStackTrace();
 		} finally {
@@ -68,6 +63,6 @@ public class sample {
 			}
 		}
 		
-		return dbtype;
+		return prop.getProperty("dbtype");
 	} //loadConfig() ends
 } //class sample ends
